@@ -8,13 +8,16 @@
     <style>
         /* Reset et variables */
         :root {
-            --primary-color: #1a1a2e;
-            --secondary-color: #16213e;
-            --accent-color: #e94560;
-            --light-color: #0f3460;
+            --primary-color: #0a0a1a;
+            --secondary-color: #121226;
+            --neon-pink: #ff2a6d;
+            --neon-blue: #05d9e8;
+            --neon-purple: #9c4fcc;
+            --neon-green: #a8e613;
+            --light-bg: #1a1a3a;
             --text-color: #e6e6e6;
-            --highlight-color: #533483;
-            --shadow-color: rgba(0, 0, 0, 0.7);
+            --shadow-color: rgba(0, 0, 0, 0.5);
+            --border-radius: 15px;
         }
 
         * {
@@ -27,7 +30,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background-color: var(--primary-color);
             min-height: 100vh;
         }
 
@@ -42,45 +45,47 @@
         header {
             text-align: center;
             padding: 60px 0;
-            background: linear-gradient(135deg, var(--primary-color), var(--light-color));
-            box-shadow: 0 4px 15px var(--shadow-color);
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
             margin-bottom: 20px;
+            box-shadow: 0 8px 20px var(--shadow-color);
         }
 
         header h1 {
             font-size: 3rem;
             margin-bottom: 10px;
-            background: linear-gradient(90deg, var(--accent-color), #ff7f50);
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            text-shadow: 0 2px 5px var(--shadow-color);
+            text-shadow: 0 0 10px rgba(5, 217, 232, 0.3);
         }
 
         header .subtitle {
             font-size: 1.3rem;
             margin-bottom: 20px;
-            color: var(--text-color);
-            opacity: 0.9;
+            color: var(--neon-green);
+            text-shadow: 0 0 5px rgba(168, 230, 19, 0.3);
         }
 
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
         }
 
         .social-links a {
             color: var(--text-color);
             text-decoration: none;
             font-size: 1.1rem;
-            transition: all 0.3s ease;
             position: relative;
+            transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            color: var(--accent-color);
+            color: var(--neon-pink);
             transform: translateY(-3px);
+            text-shadow: 0 0 8px var(--neon-pink);
         }
 
         .social-links a::after {
@@ -90,7 +95,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--accent-color);
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
             transition: width 0.3s ease;
         }
 
@@ -100,11 +105,10 @@
 
         /* Navigation */
         nav {
-            background-color: var(--light-color);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 10px var(--shadow-color);
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px var(--shadow-color);
         }
 
         nav ul {
@@ -119,45 +123,37 @@
             text-decoration: none;
             margin: 0 15px;
             font-size: 1.1rem;
-            padding: 8px 15px;
-            border-radius: 5px;
+            padding: 8px 18px;
+            border-radius: 10px;
             transition: all 0.3s ease;
             position: relative;
+            background-color: rgba(18, 18, 38, 0.5);
         }
 
         nav ul li a:hover {
-            background-color: var(--accent-color);
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
             color: white;
-            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(5, 217, 232, 0.5);
         }
 
         /* Sections générales */
         .section {
-            padding: 60px 0;
+            padding: 50px 0;
             margin-bottom: 20px;
-            background-color: rgba(26, 26, 46, 0.7);
-            border-radius: 10px;
+            background-color: var(--light-bg);
+            border-radius: var(--border-radius);
             box-shadow: 0 5px 15px var(--shadow-color);
-            backdrop-filter: blur(5px);
         }
 
         .section h2 {
             text-align: center;
             margin-bottom: 30px;
             font-size: 2rem;
-            color: var(--accent-color);
-            position: relative;
-        }
-
-        .section h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent-color), transparent);
+            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 8px rgba(5, 217, 232, 0.3);
         }
 
         /* Section À propos */
@@ -170,15 +166,16 @@
         .profile-pic {
             width: 200px;
             height: 200px;
-            border-radius: 10px;
+            border-radius: 15px;
             object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 5px 15px var(--shadow-color);
-            transition: transform 0.3s ease;
+            border: 3px solid var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue);
+            transition: all 0.3s ease;
         }
 
         .profile-pic:hover {
             transform: scale(1.05);
+            box-shadow: 0 0 25px var(--neon-pink);
         }
 
         .about-text {
@@ -199,23 +196,26 @@
 
         .skill-category {
             flex: 1;
-            background-color: rgba(22, 33, 62, 0.8);
+            background-color: rgba(26, 26, 58, 0.7);
             padding: 25px;
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             box-shadow: 0 5px 10px var(--shadow-color);
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid var(--neon-purple);
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
-            background-color: rgba(22, 33, 62, 0.9);
+            box-shadow: 0 0 15px var(--neon-purple);
+            background-color: rgba(26, 26, 58, 0.9);
         }
 
         .skill-category h3 {
             margin-bottom: 15px;
-            color: var(--accent-color);
+            color: var(--neon-pink);
             text-align: center;
             font-size: 1.5rem;
+            text-shadow: 0 0 5px rgba(255, 42, 109, 0.3);
         }
 
         .skill-category ul {
@@ -230,14 +230,15 @@
         }
 
         .skill-category li:hover {
-            color: var(--accent-color);
+            color: var(--neon-blue);
             transform: translateX(5px);
+            text-shadow: 0 0 5px var(--neon-blue);
         }
 
         .skill-category li i {
             position: absolute;
             left: 0;
-            color: var(--accent-color);
+            color: var(--neon-green);
         }
 
         /* Section Projets */
@@ -248,24 +249,26 @@
         }
 
         .project {
-            background-color: rgba(22, 33, 62, 0.8);
+            background-color: rgba(26, 26, 58, 0.7);
             padding: 25px;
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             box-shadow: 0 5px 10px var(--shadow-color);
             transition: all 0.3s ease;
-            border-left: 4px solid var(--accent-color);
+            border: 1px solid var(--neon-blue);
         }
 
         .project:hover {
             transform: translateY(-10px);
-            background-color: rgba(22, 33, 62, 0.9);
-            box-shadow: 0 10px 20px var(--shadow-color);
+            box-shadow: 0 0 20px var(--neon-blue);
+            background-color: rgba(26, 26, 58, 0.9);
+            border-color: var(--neon-pink);
         }
 
         .project h3 {
             margin-bottom: 10px;
-            color: var(--accent-color);
+            color: var(--neon-green);
             font-size: 1.4rem;
+            text-shadow: 0 0 5px var(--neon-green);
         }
 
         .project p {
@@ -275,24 +278,27 @@
 
         /* Section Expérience et Formation */
         .experience, .formation {
-            background-color: rgba(22, 33, 62, 0.8);
+            background-color: rgba(26, 26, 58, 0.7);
             padding: 25px;
-            border-radius: 10px;
+            border-radius: var(--border-radius);
             box-shadow: 0 5px 10px var(--shadow-color);
             margin-bottom: 20px;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid var(--neon-purple);
         }
 
         .experience:hover, .formation:hover {
             transform: translateY(-5px);
-            background-color: rgba(22, 33, 62, 0.9);
+            box-shadow: 0 0 15px var(--neon-purple);
+            background-color: rgba(26, 26, 58, 0.9);
         }
 
         .experience h3, .formation h3 {
             margin-bottom: 10px;
-            color: var(--accent-color);
+            color: var(--neon-pink);
             font-size: 1.4rem;
             text-align: center;
+            text-shadow: 0 0 5px var(--neon-pink);
         }
 
         .experience ul, .formation ul {
@@ -308,9 +314,10 @@
 
         .experience li::before, .formation li::before {
             content: '•';
-            color: var(--accent-color);
+            color: var(--neon-blue);
             position: absolute;
             left: 0;
+            font-size: 1.2rem;
         }
 
         /* Section Contact */
@@ -331,16 +338,18 @@
 
         .contact-info i {
             margin-right: 10px;
-            color: var(--accent-color);
+            color: var(--neon-green);
         }
 
         /* Pied de page */
         footer {
-            background-color: var(--light-color);
+            background-color: var(--light-bg);
             color: var(--text-color);
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px var(--shadow-color);
         }
 
         /* Responsive */
