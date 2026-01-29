@@ -375,6 +375,124 @@
                 font-size: 2.2rem;
             }
         }
+        /* --- CSS POUR LE PORTFOLIO RÉGIS GOMIS --- */
+
+:root {
+    /* Change ces couleurs pour correspondre à ton ancien site */
+    --primary-color: #2c3e50; /* Bleu nuit professionnel */
+    --accent-color: #3498db;  /* Bleu clair pour les accents */
+    --bg-color: #f4f4f4;      /* Gris très clair pour le fond */
+    --card-bg: #ffffff;       /* Blanc pour les cartes */
+    --text-color: #333333;
+}
+
+.portfolio-section {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 4rem;
+    font-style: italic;
+}
+
+/* Style des Blocs Principaux */
+.competence-bloc {
+    margin-bottom: 60px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.bloc-title {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.bloc-id {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Grille des sous-compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Cartes de compétences individuelles */
+.skill-card {
+    background-color: var(--card-bg);
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-left: 4px solid var(--accent-color);
+}
+
+.skill-card h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .bloc-title {
+        font-size: 1.4rem;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .bloc-id {
+        margin-bottom: 10px;
+    }
+}
     </style>
 </head>
 <body>
@@ -452,6 +570,93 @@
             </div>
         </div>
     </section>
+
+    <section id="competences" class="portfolio-section">
+    <div class="container">
+        <h2 class="section-title">Mes Compétences (BTS SIO - SISR)</h2>
+        <p class="section-subtitle">Administration des systèmes et des réseaux</p>
+
+        <div class="competence-bloc">
+            <h3 class="bloc-title">
+                <span class="bloc-id">Bloc 1</span>
+                Support et mise à disposition de services informatiques
+            </h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Gérer le patrimoine informatique</h4>
+                    <p>Recensement et gestion des actifs, suivi du cycle de vie des équipements et des licences.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Répondre aux incidents et demandes</h4>
+                    <p>Traitement des tickets (GLPI), assistance utilisateurs et dépannage de premier niveau.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Développer la présence en ligne</h4>
+                    <p>Participation à la valorisation de l'image de l'organisation sur le web.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Travailler en mode projet</h4>
+                    <p>Planification, suivi et collaboration au sein d'une équipe technique.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Mettre à disposition des services</h4>
+                    <p>Installation de postes de travail, déploiement d'applications et configuration client.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Organiser son développement pro</h4>
+                    <p>Veille technologique, auto-formation et suivi des évolutions du secteur.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="competence-bloc">
+            <h3 class="bloc-title">
+                <span class="bloc-id">Bloc 2</span>
+                Administration des systèmes et des réseaux
+            </h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Concevoir une solution d'infrastructure</h4>
+                    <p>Analyse des besoins réseaux, adressage IP (IPv4/IPv6), choix des équipements (switchs, routeurs).</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Installer, tester et déployer</h4>
+                    <p>Configuration des équipements actifs, installation de serveurs (Windows Server, Linux) et virtualisation.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Exploiter, dépanner et superviser</h4>
+                    <p>Administration quotidienne, gestion des droits utilisateurs (AD), supervision réseau et maintenance.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="competence-bloc">
+            <h3 class="bloc-title">
+                <span class="bloc-id">Bloc 3</span>
+                Cybersécurité
+            </h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Protéger les données personnelles</h4>
+                    <p>Application du RGPD et sécurisation des données sensibles de l'organisation.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Préserver l'identité numérique</h4>
+                    <p>Gestion des authentifications fortes et contrôle des accès au système d'information.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Sécuriser les équipements et usages</h4>
+                    <p>Configuration de pare-feux, antivirus centralisés et sensibilisation des utilisateurs.</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Garantir la disponibilité (SISR)</h4>
+                    <p>Assurer la cybersécurité d'une infrastructure réseau, d'un système ou d'un service (redondance, sauvegardes).</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
     <!-- Section Projets -->
     <section id="projects" class="section">
