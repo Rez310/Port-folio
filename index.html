@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Régis Gomis – Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Portfolio Professionnel – Régis Gomis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Reset et variables */
         :root {
-            --primary-color: #0a0a1a;
-            --secondary-color: #121226;
-            --neon-pink: #ff2a6d;
-            --neon-blue: #05d9e8;
-            --neon-purple: #9c4fcc;
-            --neon-green: #a8e613;
-            --light-bg: #1a1a3a;
-            --text-color: #e6e6e6;
-            --shadow-color: rgba(0, 0, 0, 0.5);
-            --border-radius: 15px;
+            --primary-color: #0f172a;       
+            --accent-color: #2563eb;        
+            --secondary-accent: #3b82f6;   
+            --bg-light: #f8fafc;            
+            --bg-white: #ffffff;            
+            --text-dark: #1e293b;           
+            --text-light: #64748b;        
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --radius: 8px;
         }
 
         * {
@@ -27,713 +29,489 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--primary-color);
-            min-height: 100vh;
         }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s;
+        }
+
+        ul { list-style: none; }
 
         .container {
-            width: 90%;
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
 
-        /* En-tête */
         header {
-            text-align: center;
-            padding: 60px 0;
-            background-color: var(--secondary-color);
-            border-radius: var(--border-radius);
-            margin-bottom: 20px;
-            box-shadow: 0 8px 20px var(--shadow-color);
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 10px rgba(5, 217, 232, 0.3);
-        }
-
-        header .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            color: var(--neon-green);
-            text-shadow: 0 0 5px rgba(168, 230, 19, 0.3);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1.1rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--neon-pink);
-            transform: translateY(-3px);
-            text-shadow: 0 0 8px var(--neon-pink);
-        }
-
-        .social-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-            transition: width 0.3s ease;
-        }
-
-        .social-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: var(--light-bg);
-            border-radius: var(--border-radius);
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px var(--shadow-color);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 15px 0;
-        }
-
-        nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1rem;
-            padding: 8px 18px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            position: relative;
-            background-color: rgba(18, 18, 38, 0.5);
-        }
-
-        nav ul li a:hover {
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-            color: white;
-            box-shadow: 0 0 10px rgba(5, 217, 232, 0.5);
-        }
-
-        /* Sections générales */
-        .section {
-            padding: 50px 0;
-            margin-bottom: 20px;
-            background-color: var(--light-bg);
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 15px var(--shadow-color);
-        }
-
-        .section h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2rem;
-            background: linear-gradient(90deg, var(--neon-blue), var(--neon-pink));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 0 8px rgba(5, 217, 232, 0.3);
-        }
-
-        /* Section À propos */
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
-            object-fit: cover;
-            border: 3px solid var(--neon-blue);
-            box-shadow: 0 0 15px var(--neon-blue);
-            transition: all 0.3s ease;
-        }
-
-        .profile-pic:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px var(--neon-pink);
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        /* Section Compétences */
-        .skills-container {
+        .navbar {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo span { color: var(--accent-color); }
+
+        .nav-links {
+            display: flex;
             gap: 30px;
         }
 
-        .skill-category {
-            flex: 1;
-            background-color: rgba(26, 26, 58, 0.7);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 10px var(--shadow-color);
-            transition: all 0.3s ease;
-            border: 1px solid var(--neon-purple);
+        .nav-links a {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 0.95rem;
         }
 
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 15px var(--neon-purple);
-            background-color: rgba(26, 26, 58, 0.9);
+        .nav-links a:hover {
+            color: var(--accent-color);
         }
 
-        .skill-category h3 {
-            margin-bottom: 15px;
-            color: var(--neon-pink);
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
+            color: white;
+            padding: 80px 0;
             text-align: center;
-            font-size: 1.5rem;
-            text-shadow: 0 0 5px rgba(255, 42, 109, 0.3);
         }
 
-        .skill-category ul {
-            list-style: none;
+        .hero h1 {
+            color: white;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
         }
 
-        .skill-category li {
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-            transition: all 0.3s ease;
+        .hero p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
         }
 
-        .skill-category li:hover {
-            color: var(--neon-blue);
-            transform: translateX(5px);
-            text-shadow: 0 0 5px var(--neon-blue);
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
         }
 
-        .skill-category li i {
-            position: absolute;
-            left: 0;
-            color: var(--neon-green);
+        .hero-btn:hover {
+            background-color: var(--secondary-accent);
+            transform: translateY(-2px);
         }
 
-        /* Section Projets */
-        .projects-container {
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 300px; 
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            background-color: #ddd;
+        }
+
+        .bloc-competence {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        .bloc-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .bloc-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+
+        .bloc-title {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
-        .project {
-            background-color: rgba(26, 26, 58, 0.7);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 10px var(--shadow-color);
-            transition: all 0.3s ease;
-            border: 1px solid var(--neon-blue);
+        .skill-item {
+            background-color: var(--bg-light);
+            padding: 20px;
+            border-radius: var(--radius);
+            transition: 0.3s;
+            border: 1px solid transparent;
         }
 
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 20px var(--neon-blue);
-            background-color: rgba(26, 26, 58, 0.9);
-            border-color: var(--neon-pink);
+        .skill-item:hover {
+            border-color: var(--accent-color);
+            background-color: white;
+            box-shadow: var(--shadow-sm);
         }
 
-        .project h3 {
-            margin-bottom: 10px;
-            color: var(--neon-green);
-            font-size: 1.4rem;
-            text-shadow: 0 0 5px var(--neon-green);
-        }
-
-        .project p {
-            margin-bottom: 10px;
-            line-height: 1.7;
-        }
-
-        /* Section Expérience et Formation */
-        .experience, .formation {
-            background-color: rgba(26, 26, 58, 0.7);
-            padding: 25px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 10px var(--shadow-color);
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            border: 1px solid var(--neon-purple);
-        }
-
-        .experience:hover, .formation:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 15px var(--neon-purple);
-            background-color: rgba(26, 26, 58, 0.9);
-        }
-
-        .experience h3, .formation h3 {
-            margin-bottom: 10px;
-            color: var(--neon-pink);
-            font-size: 1.4rem;
-            text-align: center;
-            text-shadow: 0 0 5px var(--neon-pink);
-        }
-
-        .experience ul, .formation ul {
-            list-style: none;
-            padding-left: 20px;
-        }
-
-        .experience li, .formation li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .experience li::before, .formation li::before {
-            content: '•';
-            color: var(--neon-blue);
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-
-        /* Section Contact */
-        .contact-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .contact-info {
-            margin-top: 20px;
-        }
-
-        .contact-info p {
-            margin-bottom: 10px;
+        .skill-item h4 {
             font-size: 1.1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
         }
 
-        .contact-info i {
+        .skill-item h4 i {
+            color: var(--accent-color);
             margin-right: 10px;
-            color: var(--neon-green);
+            font-size: 0.9em;
         }
 
-        /* Pied de page */
-        footer {
-            background-color: var(--light-bg);
-            color: var(--text-color);
+        .skill-item p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-tags span {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            font-weight: 600;
+        }
+
+        .contact-section {
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-            padding: 20px 0;
+        }
+        
+        .contact-section h2 { color: white; }
+        .contact-section .section-title span { background-color: var(--secondary-accent); }
+
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
             margin-top: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 15px var(--shadow-color);
+            flex-wrap: wrap;
         }
 
-        /* Responsive */
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--secondary-accent);
+        }
+
+       
+        footer {
+            background-color: #020617; 
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .about-content {
-                flex-direction: column;
-            }
-
-            .skills-container {
-                flex-direction: column;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
-
-            header h1 {
-                font-size: 2.2rem;
-            }
+            .navbar { flex-direction: column; height: auto; padding: 20px 0; }
+            .nav-links { flex-direction: column; gap: 15px; text-align: center; margin-top: 20px; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .bloc-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .contact-methods { flex-direction: column; gap: 30px; }
         }
-        /* --- CSS POUR LE PORTFOLIO RÉGIS GOMIS --- */
-
-:root {
-    /* Change ces couleurs pour correspondre à ton ancien site */
-    --primary-color: #2c3e50; /* Bleu nuit professionnel */
-    --accent-color: #3498db;  /* Bleu clair pour les accents */
-    --bg-color: #f4f4f4;      /* Gris très clair pour le fond */
-    --card-bg: #ffffff;       /* Blanc pour les cartes */
-    --text-color: #333333;
-}
-
-.portfolio-section {
-    padding: 60px 20px;
-    background-color: var(--bg-color);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.section-subtitle {
-    text-align: center;
-    color: #777;
-    margin-bottom: 4rem;
-    font-style: italic;
-}
-
-/* Style des Blocs Principaux */
-.competence-bloc {
-    margin-bottom: 60px;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.bloc-title {
-    font-size: 1.8rem;
-    color: var(--primary-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-}
-
-.bloc-id {
-    background-color: var(--accent-color);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-right: 15px;
-    font-weight: bold;
-}
-
-/* Grille des sous-compétences */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-/* Cartes de compétences individuelles */
-.skill-card {
-    background-color: var(--card-bg);
-    border: 1px solid #eee;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border-left: 4px solid var(--accent-color);
-}
-
-.skill-card h4 {
-    margin-top: 0;
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .bloc-title {
-        font-size: 1.4rem;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .bloc-id {
-        margin-bottom: 10px;
-    }
-}
     </style>
 </head>
 <body>
-    <!-- En-tête -->
+
     <header>
-        <div class="container">
-            <h1>Régis Gomis</h1>
-            <p class="subtitle">Étudiant en BTS SIO option SISR – Spécialisation Cybersécurité</p>
-            <div class="social-links">
-                <a href="mailto:regisgomis3@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="tel:+33751032557"><i class="fas fa-phone"></i> Téléphone</a>
-                <a href="https://github.com/Rez310"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/regis-gomis-510b14386/"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            </div>
+        <div class="container navbar">
+            <div class="logo">Régis<span>Gomis</span></div>
+            <nav class="nav-links">
+                <a href="#about">À propos</a>
+                <a href="#competences">Compétences</a>
+                <a href="#projects">Projets</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav>
+    <section class="hero">
         <div class="container">
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#experience">Expérience</a></li>
-                <li><a href="#formation">Formation</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <h1>Futur Administrateur Systèmes & Réseaux</h1>
+            <p>Étudiant en BTS SIO option SISR à l'Efrei Paris. <br>Passionné par la cybersécurité et les infrastructures.</p>
+            <a href="#contact" class="hero-btn">Me contacter</a>
         </div>
-    </nav>
+    </section>
 
-    <!-- Section À propos -->
-    <section id="about" class="section">
+    <section id="about">
         <div class="container">
-            <h2>À propos de moi</h2>
-            <div class="about-content">
-                <img src="images/photo.jpg" alt="Photo de Régis Gomis" class="profile-pic">
+            <div class="section-title">
+                <h2>Mon Profil</h2>
+                <span></span>
+            </div>
+            <div class="about-grid">
+                <img src="images/photo.jpg" alt="Régis Gomis" class="about-img">
                 <div class="about-text">
-                    <p>
-                        Étudiant en première année de BTS SIO à l’Efrei Paris, je me spécialise dans la cybersécurité et la gestion des systèmes et réseaux.
-                        Mon objectif est de développer des compétences solides pour protéger les données et prévenir les cybermenaces.
+                    <h3>Qui suis-je ?</h3>
+                    <p style="margin-bottom: 15px;">
+                        Actuellement en première année de <strong>BTS SIO (Services Informatiques aux Organisations)</strong>, option SISR, je me forme à la gestion, la sécurisation et la maintenance des infrastructures informatiques.
                     </p>
                     <p>
-                        Passionné par l’informatique, l’automobile et le sport, je suis rigoureux, organisé et capable de gérer le stress et les situations critiques.
-                        Mon expérience en scoutisme m’a appris à travailler en équipe, à planifier des projets et à m’adapter rapidement.
+                        Mon parcours scout m'a appris la rigueur, le travail d'équipe et la gestion de projet, des qualités que j'applique aujourd'hui dans mes projets techniques. Je suis à la recherche d'opportunités pour mettre en pratique mes connaissances en environnement professionnel.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section id="skills" class="section">
+    <section id="competences" style="background-color: #f1f5f9;">
         <div class="container">
-            <h2>Mes compétences</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Compétences techniques</h3>
-                    <ul>
-                        <li><i class="fas fa-network-wired"></i> Réseaux : TCP/IP, DNS, DHCP, VirtualBox</li>
-                        <li><i class="fas fa-code"></i> Développement : HTML, CSS, Python, Pyzo</li>
-                        <li><i class="fas fa-database"></i> Bases de données : MySQL Workbench, SQL</li>
-                        <li><i class="fas fa-server"></i> Systèmes : Debian, Ubuntu, Apache</li>
-                        <li><i class="fas fa-tools"></i> Outils : GLPI, GitHub, GitBash</li>
-                    </ul>
+            <div class="section-title">
+                <h2>Compétences Techniques</h2>
+                <span></span>
+            </div>
+
+            <div class="bloc-competence">
+                <div class="bloc-header">
+                    <span class="bloc-badge">Bloc 1</span>
+                    <h3 class="bloc-title">Support et mise à disposition de services</h3>
                 </div>
-                <div class="skill-category">
-                    <h3>Compétences transversales</h3>
-                    <ul>
-                        <li><i class="fas fa-brain"></i> Gestion du stress et des situations critiques</li>
-                        <li><i class="fas fa-search"></i> Résolution de problèmes et analyse</li>
-                        <li><i class="fas fa-users"></i> Travail en équipe et communication</li>
-                    </ul>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fas fa-desktop"></i> Gestion de parc</h4>
+                        <p>Recensement des actifs, gestion de tickets (GLPI) et suivi du cycle de vie.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-headset"></i> Support Utilisateur</h4>
+                        <p>Réponse aux incidents, assistance de niveau 1 et accompagnement.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-globe"></i> Présence en ligne</h4>
+                        <p>Valorisation de l'image numérique et gestion des identités.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc-competence">
+                <div class="bloc-header">
+                    <span class="bloc-badge">Bloc 2</span>
+                    <h3 class="bloc-title">Administration des systèmes et réseaux</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fas fa-network-wired"></i> Infrastructure Réseau</h4>
+                        <p>Conception LAN/WAN, adressage IPv4/IPv6, commutation et routage.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-server"></i> Administration Serveurs</h4>
+                        <p>Installation Windows Server/Linux, Active Directory, DHCP, DNS.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-chart-line"></i> Supervision</h4>
+                        <p>Monitoring des services, disponibilité et maintenance préventive.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc-competence">
+                <div class="bloc-header">
+                    <span class="bloc-badge">Bloc 3</span>
+                    <h3 class="bloc-title">Cybersécurité des infrastructures</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fas fa-user-shield"></i> Protection des données</h4>
+                        <p>Application du RGPD et sécurisation des accès utilisateurs.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-lock"></i> Sécurité des équipements</h4>
+                        <p>Configuration de pare-feux, ACLs et durcissement des systèmes.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-key"></i> Identité Numérique</h4>
+                        <p>Authentification forte et gestion des privilèges.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>Réalisations</h2>
+                <span></span>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Architecture Réseau Sécurisée</h3>
+                        <p style="margin: 15px 0; color: var(--text-light);">Conception d'un réseau d'entreprise multisites avec segmentation VLAN et routage inter-vlan.</p>
+                        <div class="project-tags">
+                            <span>Cisco Packet Tracer</span>
+                            <span>VLAN</span>
+                            <span>Sécurité</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Serveur de Ticketing (GLPI)</h3>
+                        <p style="margin: 15px 0; color: var(--text-light);">Déploiement d'une solution GLPI sur serveur Linux pour la gestion du support utilisateur.</p>
+                        <div class="project-tags">
+                            <span>Linux Debian</span>
+                            <span>GLPI</span>
+                            <span>Apache/MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Teranga Azur (Projet Web)</h3>
+                        <p style="margin: 15px 0; color: var(--text-light);">Développement d'une vitrine immobilière. Initiation au développement web et hébergement.</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>Hébergement Web</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="competences" class="portfolio-section">
-    <div class="container">
-        <h2 class="section-title">Mes Compétences (BTS SIO - SISR)</h2>
-        <p class="section-subtitle">Administration des systèmes et des réseaux</p>
-
-        <div class="competence-bloc">
-            <h3 class="bloc-title">
-                <span class="bloc-id">Bloc 1</span>
-                Support et mise à disposition de services informatiques
-            </h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>Gérer le patrimoine informatique</h4>
-                    <p>Recensement et gestion des actifs, suivi du cycle de vie des équipements et des licences.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Répondre aux incidents et demandes</h4>
-                    <p>Traitement des tickets (GLPI), assistance utilisateurs et dépannage de premier niveau.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Développer la présence en ligne</h4>
-                    <p>Participation à la valorisation de l'image de l'organisation sur le web.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Travailler en mode projet</h4>
-                    <p>Planification, suivi et collaboration au sein d'une équipe technique.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Mettre à disposition des services</h4>
-                    <p>Installation de postes de travail, déploiement d'applications et configuration client.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Organiser son développement pro</h4>
-                    <p>Veille technologique, auto-formation et suivi des évolutions du secteur.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="competence-bloc">
-            <h3 class="bloc-title">
-                <span class="bloc-id">Bloc 2</span>
-                Administration des systèmes et des réseaux
-            </h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>Concevoir une solution d'infrastructure</h4>
-                    <p>Analyse des besoins réseaux, adressage IP (IPv4/IPv6), choix des équipements (switchs, routeurs).</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Installer, tester et déployer</h4>
-                    <p>Configuration des équipements actifs, installation de serveurs (Windows Server, Linux) et virtualisation.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Exploiter, dépanner et superviser</h4>
-                    <p>Administration quotidienne, gestion des droits utilisateurs (AD), supervision réseau et maintenance.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="competence-bloc">
-            <h3 class="bloc-title">
-                <span class="bloc-id">Bloc 3</span>
-                Cybersécurité
-            </h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>Protéger les données personnelles</h4>
-                    <p>Application du RGPD et sécurisation des données sensibles de l'organisation.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Préserver l'identité numérique</h4>
-                    <p>Gestion des authentifications fortes et contrôle des accès au système d'information.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Sécuriser les équipements et usages</h4>
-                    <p>Configuration de pare-feux, antivirus centralisés et sensibilisation des utilisateurs.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Garantir la disponibilité (SISR)</h4>
-                    <p>Assurer la cybersécurité d'une infrastructure réseau, d'un système ou d'un service (redondance, sauvegardes).</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-    <!-- Section Projets -->
-    <section id="projects" class="section">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <h2>Mes projets</h2>
-            <div class="projects-container">
-                <div class="project">
-                    <h3>Conception d’un réseau TCP/IP sécurisé</h3>
-                    <p>Projet scolaire visant à concevoir et sécuriser un réseau local avec des adresses IP, DNS et DHCP.</p>
-                    <p><strong>Technologies :</strong> VirtualBox, Debian, TCP/IP</p>
+            <div class="section-title">
+                <h2>Contactez-moi</h2>
+                <span></span>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>regisgomis3@gmail.com</p>
                 </div>
-                <div class="project">
-                    <h3>Mise en place de GLPI sur VM</h3>
-                    <p>Installation et configuration d’un logiciel de ticketing pour la gestion des incidents informatiques.</p>
-                    <p><strong>Technologies :</strong> GLPI, VirtualBox, Ubuntu</p>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+33 07 51 03 25 57</p>
                 </div>
-                <div class="project">
-                    <h3>Site web personnel</h3>
-                    <p>Création d’un site web pour présenter mes projets et compétences.</p>
-                    <p><strong>Technologies :</strong> HTML, CSS, GitHub Pages</p>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p><a href="https://www.linkedin.com/in/regis-gomis-510b14386/" target="_blank">Profil LinkedIn</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <p><a href="https://github.com/Rez310" target="_blank">Profil GitHub</a></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section Expérience -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Mon expérience</h2>
-            <div class="experience-container">
-                <div class="experience">
-                    <h3>Scoutisme – Association des scouts du Sénégal</h3>
-                    <p><strong>2016 – Présent</strong></p>
-                    <ul>
-                        <li>Organisation de camps et sorties (logistique, sécurité, gestion budgétaire).</li>
-                        <li>Développement de qualités telles que la rigueur, l’organisation et l’adaptation.</li>
-                        <li>Conduite de projets éducatifs et citoyens.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Formation -->
-    <section id="formation" class="section">
-        <div class="container">
-            <h2>Ma formation</h2>
-            <div class="formation-container">
-                <div class="formation">
-                    <h3>BTS SIO option SISR – Efrei Paris</h3>
-                    <p><strong>2025 – Présent</strong></p>
-                    <p>Matières principales : Cybersécurité, administration système, développement d’applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Contact -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Me contacter</h2>
-            <div class="contact-content">
-                <p>N’hésitez pas à me contacter pour toute question ou opportunité de stage !</p>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> regisgomis3@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> 07 51 03 25 57</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Paris, Île-de-France</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pied de page -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Régis Gomis – Tous droits réservés</p>
+            <p>&copy; 2026 Régis Gomis. Portfolio réalisé dans le cadre du BTS SIO.</p>
         </div>
     </footer>
+
 </body>
 </html>
