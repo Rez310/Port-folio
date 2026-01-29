@@ -8,14 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     
     <style>
+        /* --- VARIABLES & RESET --- */
         :root {
-            --primary-color: #0f172a;       
-            --accent-color: #2563eb;        
-            --secondary-accent: #3b82f6;   
-            --bg-light: #f8fafc;            
-            --bg-white: #ffffff;            
+            /* Palette Corporate / Bleue */
+            --primary-color: #0f172a;       /* Bleu très foncé */
+            --accent-color: #2563eb;        /* Bleu roi dynamique */
+            --secondary-accent: #3b82f6;    /* Bleu plus clair */
+            --dev-color: #8b5cf6;           /* Violet pour la section Dev */
+            --bg-light: #f8fafc;            /* Gris très clair */
+            --bg-white: #ffffff;            /* Blanc pur */
             --text-dark: #1e293b;           
-            --text-light: #64748b;        
+            --text-light: #64748b;          
             --border-color: #e2e8f0;
             --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
             --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
@@ -54,6 +57,7 @@
             padding: 0 20px;
         }
 
+        /* --- HEADER & NAVIGATION --- */
         header {
             background-color: var(--bg-white);
             box-shadow: var(--shadow-sm);
@@ -92,6 +96,7 @@
             color: var(--accent-color);
         }
 
+        /* --- HERO SECTION --- */
         .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
             color: white;
@@ -126,6 +131,7 @@
             transform: translateY(-2px);
         }
 
+        /* --- SECTIONS COMMUNES --- */
         section {
             padding: 80px 0;
         }
@@ -149,6 +155,7 @@
             border-radius: 2px;
         }
 
+        /* --- À PROPOS --- */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -162,9 +169,10 @@
             object-fit: cover;
             border-radius: var(--radius);
             box-shadow: var(--shadow-md);
-            background-color: #ddd;
+            background-color: #ddd; 
         }
 
+        /* --- COMPÉTENCES --- */
         .bloc-competence {
             background: var(--bg-white);
             border-radius: var(--radius);
@@ -172,6 +180,23 @@
             box-shadow: var(--shadow-md);
             margin-bottom: 40px;
             border-left: 5px solid var(--accent-color);
+        }
+
+        /* Style spécifique pour le bloc DEV */
+        .bloc-dev {
+            border-left-color: var(--dev-color);
+        }
+        
+        .bloc-dev .bloc-badge {
+            background-color: var(--dev-color);
+        }
+
+        .bloc-dev .skill-item:hover {
+            border-color: var(--dev-color);
+        }
+        
+        .bloc-dev .skill-item h4 i {
+            color: var(--dev-color);
         }
 
         .bloc-header {
@@ -237,7 +262,7 @@
             margin: 0;
         }
 
-        
+        /* --- PROJETS --- */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -271,6 +296,7 @@
             font-weight: 600;
         }
 
+        /* --- CONTACT --- */
         .contact-section {
             background-color: var(--primary-color);
             color: white;
@@ -300,7 +326,7 @@
             color: var(--secondary-accent);
         }
 
-       
+        /* --- FOOTER --- */
         footer {
             background-color: #020617; 
             color: #94a3b8;
@@ -336,7 +362,7 @@
     <section class="hero">
         <div class="container">
             <h1>Futur Administrateur Systèmes & Réseaux</h1>
-            <p>Étudiant en BTS SIO option SISR à l'Efrei Paris. <br>Passionné par la cybersécurité et les infrastructures.</p>
+            <p>Étudiant en BTS SIO option SISR à l'Efrei Paris. <br>Profil polyvalent avec compétences en Développement.</p>
             <a href="#contact" class="hero-btn">Me contacter</a>
         </div>
     </section>
@@ -355,7 +381,7 @@
                         Actuellement en première année de <strong>BTS SIO (Services Informatiques aux Organisations)</strong>, option SISR, je me forme à la gestion, la sécurisation et la maintenance des infrastructures informatiques.
                     </p>
                     <p>
-                        Mon parcours scout m'a appris la rigueur, le travail d'équipe et la gestion de projet, des qualités que j'applique aujourd'hui dans mes projets techniques. Je suis à la recherche d'opportunités pour mettre en pratique mes connaissances en environnement professionnel.
+                        Mon parcours scout m'a appris la rigueur, le travail d'équipe et la gestion de projet. Bien que spécialisé en réseaux, je maintiens une forte appétence pour le développement web et logiciel, ce qui me permet d'avoir une vision globale des projets informatiques.
                     </p>
                 </div>
             </div>
@@ -407,6 +433,27 @@
                     <div class="skill-item">
                         <h4><i class="fas fa-chart-line"></i> Supervision</h4>
                         <p>Monitoring des services, disponibilité et maintenance préventive.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bloc-competence bloc-dev">
+                <div class="bloc-header">
+                    <span class="bloc-badge">Polyvalence</span>
+                    <h3 class="bloc-title">Développement d'applications</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <h4><i class="fas fa-code"></i> Développement Web</h4>
+                        <p>Conception de sites (HTML, CSS, PHP) et interfaces responsive.</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-database"></i> Gestion des Données</h4>
+                        <p>Modélisation et requêtage de bases de données (SQL, MySQL).</p>
+                    </div>
+                    <div class="skill-item">
+                        <h4><i class="fas fa-terminal"></i> Algorithmique</h4>
+                        <p>Écriture de scripts, logique de programmation et maintenance applicative.</p>
                     </div>
                 </div>
             </div>
@@ -468,11 +515,12 @@
 
                 <div class="project-card">
                     <div class="project-content">
-                        <h3>Teranga Azur (Projet Web)</h3>
-                        <p style="margin: 15px 0; color: var(--text-light);">Développement d'une vitrine immobilière. Initiation au développement web et hébergement.</p>
+                        <h3>Teranga Azur (E-commerce)</h3>
+                        <p style="margin: 15px 0; color: var(--text-light);">Site e-commerce de vente de villas. Développement front/back et base de données.</p>
                         <div class="project-tags">
+                            <span>PHP/SQL</span>
                             <span>HTML/CSS</span>
-                            <span>Hébergement Web</span>
+                            <span>Projet Dev</span>
                         </div>
                     </div>
                 </div>
@@ -493,7 +541,7 @@
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
-                    <p>+33 07 51 03 25 57</p>
+                    <p>07 51 03 25 57</p>
                 </div>
                 <div class="contact-item">
                     <i class="fab fa-linkedin"></i>
