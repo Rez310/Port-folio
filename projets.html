@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Régis Gomis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <nav>
+        <div class="logo">&lt;RegisGomis /&gt;</div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="competences.html">Compétences</a>
+            <a href="projets.html" class="active">Projets</a>
+            <a href="realisations.html">Réalisations Pro</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Mes Projets</h1>
+        <p style="color: var(--text-dim); margin-bottom: 50px; font-size: 1.1rem;">
+            Projets académiques et personnels démontrant mes compétences techniques
+        </p>
+
+        <!-- Projet 1: Architecture Réseau -->
+        <section id="reseau" class="competence-detail" style="border-left-color: var(--neon-blue);">
+            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="display: inline-block; border-color: var(--neon-blue);">
+                        <i class="fas fa-network-wired"></i> Architecture Réseau Sécurisée
+                    </h2>
+                    <div style="margin-top: 10px;">
+                        <span class="badge badge-blue">SISR</span>
+                        <span class="badge badge-blue">Cisco</span>
+                        <span class="badge badge-blue">Sécurité</span>
+                    </div>
+                </div>
+                <div class="project-badge">RÉSEAU</div>
+            </div>
+
+            <h3>Contexte du projet</h3>
+            <p>Conception et simulation d'une architecture réseau complète pour une entreprise fictive disposant de 3 sites distants. 
+               L'objectif était de créer une infrastructure sécurisée, performante et évolutive.</p>
+
+            <h3>Problématique</h3>
+            <p>Comment interconnecter de manière sécurisée plusieurs sites géographiquement distants tout en garantissant 
+               la séparation des flux métiers et la haute disponibilité des services ?</p>
+
+            <h3>Solutions mises en œuvre</h3>
+            <ul class="competence-list">
+                <li><strong>Segmentation réseau :</strong> Mise en place de VLANs pour isoler les différents services (Administration, Production, Invités, VoIP)</li>
+                <li><strong>Adressage IP :</strong> Plan d'adressage IPv4 optimisé avec VLSM et configuration IPv6 pour anticiper la migration</li>
+                <li><strong>Routage inter-sites :</strong> Configuration de routeurs Cisco avec protocoles de routage dynamique (OSPF)</li>
+                <li><strong>Sécurité WiFi :</strong> Déploiement d'un serveur Radius pour l'authentification 802.1X des utilisateurs WiFi</li>
+                <li><strong>Pare-feu :</strong> Installation et configuration de PfSense pour filtrer le trafic entre les zones</li>
+                <li><strong>ACLs :</strong> Mise en place de listes de contrôle d'accès pour restreindre les flux selon les politiques de sécurité</li>
+                <li><strong>Redondance :</strong> Configuration HSRP (Hot Standby Router Protocol) pour la haute disponibilité des passerelles</li>
+            </ul>
+
+            <h3>Technologies utilisées</h3>
+            <div style="margin: 20px 0;">
+                <span class="badge badge-blue">Cisco Packet Tracer</span>
+                <span class="badge badge-blue">Cisco IOS</span>
+                <span class="badge badge-blue">VLANs</span>
+                <span class="badge badge-blue">OSPF</span>
+                <span class="badge badge-blue">Radius</span>
+                <span class="badge badge-blue">PfSense</span>
+                <span class="badge badge-blue">802.1X</span>
+            </div>
+
+            <h3>Compétences mobilisées</h3>
+            <p>Ce projet m'a permis de développer des compétences en :</p>
+            <ul class="competence-list">
+                <li>Conception d'architectures réseau complexes</li>
+                <li>Configuration de matériel réseau Cisco</li>
+                <li>Mise en œuvre de politiques de sécurité réseau</li>
+                <li>Documentation technique (schémas réseau, tables d'adressage)</li>
+                <li>Troubleshooting et résolution de problèmes réseau</li>
+            </ul>
+
+            <h3>Résultats</h3>
+            <p>Infrastructure réseau opérationnelle simulant un environnement d'entreprise réel avec :</p>
+            <ul class="competence-list">
+                <li>✅ Connectivité entre les 3 sites validée</li>
+                <li>✅ Sécurisation des accès WiFi par authentification</li>
+                <li>✅ Séparation des flux métiers respectée</li>
+                <li>✅ Haute disponibilité assurée par la redondance</li>
+            </ul>
+        </section>
+
+        <!-- Projet 2: Teranga Azur -->
+        <section id="teranga" class="competence-detail" style="border-left-color: var(--neon-purple);">
+            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="display: inline-block; border-color: var(--neon-purple);">
+                        <i class="fas fa-laptop-code"></i> Teranga Azur
+                    </h2>
+                    <div style="margin-top: 10px;">
+                        <span class="badge">HTML5</span>
+                        <span class="badge">CSS3</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">E-commerce</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="project-badge dev">WEB DEV</div>
+                    <div class="status-badge" style="margin-top: 10px;">🚧 Projet en développement actif</div>
+                </div>
+            </div>
+
+            <h3>⚠️ Statut du projet</h3>
+            <p style="background: rgba(255, 107, 53, 0.1); padding: 15px; border-left: 4px solid var(--neon-orange); border-radius: 5px;">
+                <strong>Ce projet est actuellement en cours de développement.</strong> Il s'agit d'un projet académique 
+                dans le cadre de ma formation BTS SIO. Certaines fonctionnalités sont encore en phase de conception 
+                et d'implémentation. Les captures d'écran et descriptions ci-dessous représentent l'état actuel et 
+                les objectifs à atteindre.
+            </p>
+
+            <h3>Contexte du projet</h3>
+            <p>Création d'un site e-commerce immobilier pour la vente de villas de luxe sur la côte sénégalaise. 
+               Ce projet académique vise à développer une plateforme web moderne et attractive pour valoriser 
+               des biens immobiliers haut de gamme.</p>
+
+            <h3>Objectifs du projet</h3>
+            <ul class="competence-list">
+                <li>Créer une vitrine digitale professionnelle et élégante</li>
+                <li>Permettre aux visiteurs de consulter le catalogue de villas disponibles</li>
+                <li>Mettre en place un système de contact et de demande d'information</li>
+                <li>Développer un système de réservation en ligne (en cours)</li>
+                <li>Assurer une expérience utilisateur optimale sur tous les supports (responsive design)</li>
+            </ul>
+
+            <h3>Fonctionnalités développées</h3>
+            <ul class="competence-list">
+                <li>✅ <strong>Page d'accueil attractive</strong> avec carousel de photos et présentation de l'entreprise</li>
+                <li>✅ <strong>Catalogue de villas</strong> avec système de filtres et de recherche</li>
+                <li>✅ <strong>Fiches détaillées</strong> pour chaque villa (photos, caractéristiques, localisation)</li>
+                <li>✅ <strong>Design 100% responsive</strong> optimisé pour mobile, tablette et desktop</li>
+                <li>✅ <strong>Formulaire de contact</strong> pour demandes de renseignements</li>
+                <li>🚧 <strong>Système de réservation en ligne</strong> (en cours de développement)</li>
+                <li>🚧 <strong>Espace client</strong> avec gestion des favoris (en cours de développement)</li>
+                <li>🚧 <strong>Base de données clients</strong> pour le CRM (en cours de développement)</li>
+                <li>🚧 <strong>Module de paiement sécurisé</strong> (planifié)</li>
+            </ul>
+
+            <h3>Technologies utilisées</h3>
+            <div style="margin: 20px 0;">
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Responsive Design</span>
+                <span class="badge">Google Maps API</span>
+                <span class="badge badge-orange">MySQL (à venir)</span>
+                <span class="badge badge-orange">PHP (à venir)</span>
+            </div>
+
+            <h3>Compétences développées</h3>
+            <ul class="competence-list">
+                <li>Développement frontend (HTML, CSS, JavaScript)</li>
+                <li>Design responsive et mobile-first</li>
+                <li>UX/UI design et ergonomie web</li>
+                <li>Intégration d'APIs tierces (Google Maps)</li>
+                <li>Gestion de projet web de bout en bout</li>
+                <li>Optimisation des performances et SEO</li>
+            </ul>
+
+            <h3>Prochaines étapes</h3>
+            <p><strong>Roadmap de développement :</strong></p>
+            <ul class="competence-list">
+                <li>📅 Février 2025 : Finalisation du système de réservation en ligne</li>
+                <li>📅 Mars 2025 : Développement de l'espace client et du backend PHP/MySQL</li>
+                <li>📅 Avril 2025 : Tests utilisateurs et optimisations</li>
+                <li>📅 Mai 2025 : Mise en ligne de la version finale</li>
+            </ul>
+
+            <div style="margin-top: 30px; padding: 20px; background: rgba(188, 19, 254, 0.1); border-radius: 8px;">
+                <p style="margin: 0;"><i class="fas fa-info-circle"></i> 
+                   <strong>Note :</strong> Ce projet est réalisé dans un cadre pédagogique. Il ne constitue pas un site commercial réel 
+                   mais démontre ma capacité à concevoir et développer une application web complète.</p>
+            </div>
+        </section>
+
+        <!-- Projet 3: GLPI -->
+        <section id="glpi" class="competence-detail" style="border-left-color: var(--neon-green);">
+            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="display: inline-block; border-color: var(--neon-green);">
+                        <i class="fas fa-ticket-alt"></i> Serveur de Ticketing GLPI
+                    </h2>
+                    <div style="margin-top: 10px;">
+                        <span class="badge badge-green">Linux</span>
+                        <span class="badge badge-green">GLPI</span>
+                        <span class="badge badge-green">LAMP</span>
+                    </div>
+                </div>
+                <div class="project-badge ops">LINUX</div>
+            </div>
+
+            <h3>Contexte du projet</h3>
+            <p>Déploiement d'une solution de gestion des incidents et du patrimoine informatique pour centraliser 
+               le support utilisateur et l'inventaire des équipements.</p>
+
+            <h3>Problématique</h3>
+            <p>Comment mettre en place une solution open source de service desk permettant de gérer efficacement 
+               les demandes utilisateurs et de maintenir un inventaire à jour du parc informatique ?</p>
+
+            <h3>Architecture technique</h3>
+            <ul class="competence-list">
+                <li><strong>Serveur :</strong> Machine virtuelle Linux Debian 11</li>
+                <li><strong>Stack LAMP :</strong> Linux + Apache + MySQL + PHP</li>
+                <li><strong>Application :</strong> GLPI (Gestionnaire Libre de Parc Informatique)</li>
+                <li><strong>Plugins :</strong> FusionInventory pour l'inventaire automatique</li>
+            </ul>
+
+            <h3>Étapes de réalisation</h3>
+
+            <h4>1. Préparation de l'environnement</h4>
+            <ul class="competence-list">
+                <li>Création d'une machine virtuelle sous VirtualBox</li>
+                <li>Installation de Debian 11 en mode serveur</li>
+                <li>Configuration réseau et SSH pour administration à distance</li>
+                <li>Mise à jour du système et installation des outils de base</li>
+            </ul>
+
+            <h4>2. Installation de la stack LAMP</h4>
+            <ul class="competence-list">
+                <li>Installation et configuration d'Apache2</li>
+                <li>Installation de MariaDB et sécurisation de l'installation</li>
+                <li>Installation de PHP et des modules requis (php-mysql, php-xml, php-mbstring, etc.)</li>
+                <li>Configuration des paramètres PHP pour GLPI (memory_limit, upload_max_filesize)</li>
+            </ul>
+
+            <h4>3. Déploiement de GLPI</h4>
+            <ul class="competence-list">
+                <li>Téléchargement de la dernière version stable de GLPI</li>
+                <li>Configuration de la base de données MySQL</li>
+                <li>Installation via l'interface web</li>
+                <li>Configuration initiale (entités, profils utilisateurs, notifications)</li>
+            </ul>
+
+            <h4>4. Configuration avancée</h4>
+            <ul class="competence-list">
+                <li>Création de catégories de tickets personnalisées</li>
+                <li>Configuration des SLA (temps de résolution, priorités)</li>
+                <li>Paramétrage des notifications par email</li>
+                <li>Installation du plugin FusionInventory pour l'inventaire automatique</li>
+                <li>Création de règles de routage automatique des tickets</li>
+            </ul>
+
+            <h4>5. Intégration avec l'infrastructure</h4>
+            <ul class="competence-list">
+                <li>Synchronisation avec Active Directory pour l'authentification (LDAP)</li>
+                <li>Déploiement des agents FusionInventory sur les postes clients</li>
+                <li>Configuration des remontées automatiques d'inventaire</li>
+            </ul>
+
+            <h3>Fonctionnalités mises en œuvre</h3>
+            <ul class="competence-list">
+                <li>✅ Système de ticketing multi-niveaux (N1, N2, N3)</li>
+                <li>✅ Gestion du patrimoine informatique (matériel, logiciels, licences)</li>
+                <li>✅ Suivi des contrats et garanties</li>
+                <li>✅ Base de connaissance pour les solutions récurrentes</li>
+                <li>✅ Tableaux de bord et statistiques</li>
+                <li>✅ Gestion des fournisseurs et contacts</li>
+            </ul>
+
+            <h3>Technologies et outils</h3>
+            <div style="margin: 20px 0;">
+                <span class="badge badge-green">Linux Debian</span>
+                <span class="badge badge-green">Apache2</span>
+                <span class="badge badge-green">MariaDB</span>
+                <span class="badge badge-green">PHP</span>
+                <span class="badge badge-green">GLPI</span>
+                <span class="badge badge-green">FusionInventory</span>
+                <span class="badge badge-green">LDAP</span>
+            </div>
+
+            <h3>Compétences acquises</h3>
+            <ul class="competence-list">
+                <li>Administration de serveurs Linux</li>
+                <li>Installation et configuration de services web (Apache, MySQL, PHP)</li>
+                <li>Déploiement d'applications métier</li>
+                <li>Intégration avec annuaire Active Directory</li>
+                <li>Gestion de projet de déploiement</li>
+                <li>Documentation technique et formation utilisateurs</li>
+            </ul>
+
+            <h3>Résultats et bénéfices</h3>
+            <ul class="competence-list">
+                <li>📊 Centralisation de toutes les demandes utilisateurs</li>
+                <li>📈 Amélioration du temps de résolution des incidents</li>
+                <li>💾 Inventaire automatisé et à jour du parc informatique</li>
+                <li>📝 Traçabilité complète des interventions</li>
+                <li>📧 Notification automatique des utilisateurs</li>
+            </ul>
+
+            <div style="margin-top: 30px; padding: 20px; background: rgba(0, 255, 0, 0.1); border-radius: 8px;">
+                <p style="margin: 0;"><i class="fas fa-check-circle"></i> 
+                   <strong>Projet validé :</strong> Ce projet a été présenté dans le cadre de mes réalisations professionnelles 
+                   pour le BTS SIO et a été salué pour sa complétude et sa documentation.</p>
+            </div>
+        </section>
+
+        <!-- Projet 4: Automatisation Python -->
+        <section id="python" class="competence-detail" style="border-left-color: var(--neon-blue);">
+            <div style="display: flex; justify-content: space-between; align-items: start; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <h2 style="display: inline-block; border-color: var(--neon-blue);">
+                        <i class="fab fa-python"></i> Scanner de Ports Python
+                    </h2>
+                    <div style="margin-top: 10px;">
+                        <span class="badge badge-blue">Python</span>
+                        <span class="badge badge-blue">Réseau</span>
+                        <span class="badge badge-blue">Scripting</span>
+                    </div>
+                </div>
+                <div class="project-badge">SCRIPTING</div>
+            </div>
+
+            <h3>Contexte du projet</h3>
+            <p>Développement d'un script Python pour automatiser la découverte des services réseau et 
+               l'audit de sécurité basique d'un réseau local.</p>
+
+            <h3>Fonctionnalités du script</h3>
+            <ul class="competence-list">
+                <li>Scan de plages d'adresses IP</li>
+                <li>Détection des ports ouverts (TCP)</li>
+                <li>Identification des services associés aux ports</li>
+                <li>Génération de rapports au format CSV</li>
+                <li>Mode multithreading pour accélérer le scan</li>
+            </ul>
+
+            <h3>Technologies</h3>
+            <div style="margin: 20px 0;">
+                <span class="badge badge-blue">Python 3</span>
+                <span class="badge badge-blue">Socket</span>
+                <span class="badge badge-blue">Threading</span>
+                <span class="badge badge-blue">CSV</span>
+            </div>
+
+            <div style="margin-top: 30px; padding: 20px; background: rgba(0, 243, 255, 0.1); border-radius: 8px;">
+                <p style="margin: 0;"><i class="fas fa-shield-alt"></i> 
+                   <strong>Note sur l'éthique :</strong> Cet outil a été développé dans un cadre pédagogique et testé uniquement 
+                   sur un réseau simulé en laboratoire. L'utilisation de scanners de ports sur des réseaux dont vous n'êtes pas 
+                   propriétaire peut être illégale.</p>
+            </div>
+        </section>
+
+        <section style="margin-top: 80px; text-align: center;">
+            <h2 style="display: block; border: none;">Intéressé par ces projets ?</h2>
+            <p style="color: var(--text-dim); margin-bottom: 30px;">
+                N'hésitez pas à me contacter pour plus de détails ou pour discuter de collaborations
+            </p>
+            <a href="contact.html" class="btn"><i class="fas fa-envelope"></i> Me Contacter</a>
+            <a href="realisations.html" class="btn btn-secondary" style="margin-left: 15px;">
+                <i class="fas fa-briefcase"></i> Réalisations professionnelles
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Régis Gomis - BTS SIO SISR | 
+           <a href="https://github.com/Rez310" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+           <a href="https://www.linkedin.com/in/regis-gomis-510b14386/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

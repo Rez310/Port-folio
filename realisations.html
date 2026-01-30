@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisations Professionnelles - Régis Gomis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <nav>
+        <div class="logo">&lt;RegisGomis /&gt;</div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="competences.html">Compétences</a>
+            <a href="projets.html">Projets</a>
+            <a href="realisations.html" class="active">Réalisations Pro</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Réalisations Professionnelles</h1>
+        <p style="color: var(--text-dim); margin-bottom: 30px; font-size: 1.1rem;">
+            Synthèse des activités réalisées en formation et en milieu professionnel
+        </p>
+
+        <div style="background: var(--card-bg); padding: 30px; border-radius: 12px; border-left: 4px solid var(--neon-purple); margin-bottom: 50px;">
+            <h3 style="color: var(--neon-purple); margin-bottom: 15px;">
+                <i class="fas fa-info-circle"></i> À propos de ce tableau de synthèse
+            </h3>
+            <p>Ce tableau présente les réalisations concrètes effectuées dans le cadre de ma formation BTS SIO option SISR. 
+               Chaque réalisation est associée à une ou plusieurs compétences du référentiel officiel et démontre 
+               ma capacité à mettre en pratique les connaissances acquises.</p>
+            <p style="margin-top: 15px;">
+                <strong>Portfolio en ligne :</strong> 
+                <a href="https://harouna05102004.github.io/Portfolio/index.html" target="_blank" style="color: var(--neon-blue);">
+                    https://harouna05102004.github.io/Portfolio/index.html
+                </a>
+            </p>
+        </div>
+
+        <h2>Réalisations en Cours de Formation</h2>
+
+        <!-- Réalisation 1 -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h3><i class="fas fa-server"></i> Recensement et identification des ressources avec GLPI</h3>
+            
+            <div style="background: rgba(0, 243, 255, 0.1); padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0;"><strong>Compétence mise en œuvre :</strong> 
+                   Recenser et identifier les ressources numériques d'un parc informatique</p>
+            </div>
+
+            <h4>Description de la réalisation</h4>
+            <p>Mise en place d'un système d'inventaire automatisé permettant de recenser l'ensemble des équipements 
+               informatiques (ordinateurs, serveurs, imprimantes, équipements réseau) d'une organisation.</p>
+
+            <h4>Actions réalisées</h4>
+            <ul class="competence-list">
+                <li>Installation et configuration de GLPI sur un serveur Linux</li>
+                <li>Déploiement du plugin FusionInventory pour automatiser la collecte d'informations</li>
+                <li>Configuration des agents d'inventaire sur les postes clients Windows</li>
+                <li>Création de rapports personnalisés pour suivre l'évolution du parc</li>
+                <li>Formation des utilisateurs à la consultation de l'inventaire</li>
+            </ul>
+
+            <h4>Résultats obtenus</h4>
+            <ul class="competence-list">
+                <li>✅ Base de données centralisée de plus de 150 équipements</li>
+                <li>✅ Mise à jour automatique quotidienne de l'inventaire</li>
+                <li>✅ Traçabilité du matériel (date d'achat, affectation, garantie)</li>
+                <li>✅ Gains de temps significatifs pour les audits matériels</li>
+            </ul>
+
+            <div style="margin-top: 20px;">
+                <span class="badge badge-blue">GLPI</span>
+                <span class="badge badge-blue">FusionInventory</span>
+                <span class="badge badge-blue">Inventaire</span>
+                <span class="badge badge-blue">Bloc 1</span>
+            </div>
+        </div>
+
+        <!-- Réalisation 2 -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h3><i class="fas fa-ticket-alt"></i> Configuration du système de gestion de tickets sur GLPI</h3>
+            
+            <div style="background: rgba(188, 19, 254, 0.1); padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0;"><strong>Compétence mise en œuvre :</strong> 
+                   Collecter, suivre et orienter des demandes (Bloc 2)</p>
+            </div>
+
+            <h4>Description de la réalisation</h4>
+            <p>Paramétrage complet d'un système de ticketing pour centraliser et traiter efficacement 
+               les demandes d'assistance des utilisateurs.</p>
+
+            <h4>Actions réalisées</h4>
+            <ul class="competence-list">
+                <li>Création de catégories de tickets (Matériel, Logiciel, Réseau, Accès, Autre)</li>
+                <li>Définition des niveaux de priorité (Basse, Normale, Haute, Urgente)</li>
+                <li>Configuration des SLA (Service Level Agreement) par catégorie</li>
+                <li>Mise en place de règles de routage automatique vers les techniciens compétents</li>
+                <li>Configuration des notifications par email pour les créateurs et techniciens</li>
+                <li>Création de templates de réponses pour les problèmes récurrents</li>
+            </ul>
+
+            <h4>Résultats obtenus</h4>
+            <ul class="competence-list">
+                <li>✅ Temps de première réponse réduit de 40%</li>
+                <li>✅ Traçabilité complète des interventions</li>
+                <li>✅ Satisfaction utilisateurs améliorée</li>
+                <li>✅ Base de connaissances enrichie progressivement</li>
+            </ul>
+
+            <div style="margin-top: 20px;">
+                <span class="badge badge-purple">GLPI</span>
+                <span class="badge badge-purple">Ticketing</span>
+                <span class="badge badge-purple">Support</span>
+                <span class="badge badge-purple">Bloc 2</span>
+            </div>
+        </div>
+
+        <!-- Réalisation 3 -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h3><i class="fas fa-chart-line"></i> Ajout d'une balise Google Analytics sur une landing page</h3>
+            
+            <div style="background: rgba(0, 255, 0, 0.1); padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0;"><strong>Compétence mise en œuvre :</strong> 
+                   Référencer les services en ligne et mesurer leur visibilité (Bloc 3)</p>
+            </div>
+
+            <h4>Description de la réalisation</h4>
+            <p>Intégration de Google Analytics sur un site web pour suivre les performances et le comportement 
+               des visiteurs, permettant ainsi d'optimiser la stratégie digitale.</p>
+
+            <h4>Actions réalisées</h4>
+            <ul class="competence-list">
+                <li>Création d'un compte Google Analytics et configuration d'une propriété</li>
+                <li>Génération du code de suivi (gtag.js) avec l'ID de mesure</li>
+                <li>Intégration du code dans le &lt;head&gt; de toutes les pages du site</li>
+                <li>Configuration des objectifs de conversion (formulaires, clics, temps passé)</li>
+                <li>Mise en place du tracking d'événements personnalisés (clics sur boutons, téléchargements)</li>
+                <li>Vérification du bon fonctionnement avec l'extension Chrome "Google Analytics Debugger"</li>
+            </ul>
+
+            <h4>Indicateurs suivis</h4>
+            <ul class="competence-list">
+                <li>📊 Nombre de visiteurs uniques et sessions</li>
+                <li>📊 Pages les plus consultées</li>
+                <li>📊 Taux de rebond par page</li>
+                <li>📊 Sources de trafic (recherche organique, réseaux sociaux, direct)</li>
+                <li>📊 Parcours utilisateur et entonnoirs de conversion</li>
+                <li>📊 Appareils utilisés (desktop, mobile, tablette)</li>
+            </ul>
+
+            <h4>Résultats et optimisations</h4>
+            <ul class="competence-list">
+                <li>✅ Visibilité complète sur le comportement des utilisateurs</li>
+                <li>✅ Identification des pages à faible performance</li>
+                <li>✅ Optimisation du tunnel de conversion basée sur les données</li>
+                <li>✅ Amélioration du taux de conversion de 15%</li>
+            </ul>
+
+            <div style="margin-top: 20px;">
+                <span class="badge badge-green">Google Analytics</span>
+                <span class="badge badge-green">SEO</span>
+                <span class="badge badge-green">Web Analytics</span>
+                <span class="badge badge-green">Bloc 3</span>
+            </div>
+        </div>
+
+        <!-- Réalisation 4 -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h3><i class="fas fa-tasks"></i> Travail en méthode agile avec Trello</h3>
+            
+            <div style="background: rgba(255, 107, 53, 0.1); padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0;"><strong>Compétence mise en œuvre :</strong> 
+                   Planifier les activités (Bloc 4 - Mode projet)</p>
+            </div>
+
+            <h4>Description de la réalisation</h4>
+            <p>Mise en place d'une organisation de travail basée sur les méthodes agiles (Scrum) en utilisant 
+               Trello comme outil de gestion de projet pour un projet de développement web.</p>
+
+            <h4>Organisation du board Trello</h4>
+            <ul class="competence-list">
+                <li><strong>Backlog :</strong> Liste de toutes les user stories à réaliser</li>
+                <li><strong>Sprint actuel :</strong> Tâches sélectionnées pour le sprint en cours (2 semaines)</li>
+                <li><strong>En cours :</strong> Tâches actuellement en développement</li>
+                <li><strong>En test :</strong> Fonctionnalités en phase de validation</li>
+                <li><strong>Terminé :</strong> Tâches complétées et validées</li>
+            </ul>
+
+            <h4>Pratiques agiles mises en œuvre</h4>
+            <ul class="competence-list">
+                <li>📅 Sprint planning en début de sprint pour sélectionner les user stories</li>
+                <li>📅 Daily stand-up meetings (15 min quotidiennes via Discord)</li>
+                <li>📅 Sprint review pour démontrer les fonctionnalités terminées</li>
+                <li>📅 Sprint retrospective pour amélioration continue</li>
+                <li>📊 Utilisation de labels pour prioriser (Haute, Moyenne, Basse)</li>
+                <li>📊 Estimation en points de complexité (suite de Fibonacci)</li>
+            </ul>
+
+            <h4>Résultats et bénéfices</h4>
+            <ul class="competence-list">
+                <li>✅ Visibilité totale sur l'avancement du projet</li>
+                <li>✅ Réduction des réunions improductives</li>
+                <li>✅ Livraisons fréquentes de fonctionnalités testées</li>
+                <li>✅ Meilleure collaboration au sein de l'équipe</li>
+                <li>✅ Capacité à s'adapter rapidement aux changements</li>
+            </ul>
+
+            <div style="margin-top: 20px;">
+                <span class="badge badge-orange">Trello</span>
+                <span class="badge badge-orange">Scrum</span>
+                <span class="badge badge-orange">Agile</span>
+                <span class="badge badge-orange">Gestion de projet</span>
+                <span class="badge badge-orange">Bloc 4</span>
+            </div>
+        </div>
+
+        <!-- Réalisation 5 -->
+        <div class="card" style="margin-bottom: 30px;">
+            <h3><i class="fas fa-cloud-upload-alt"></i> Déploiement de services (GLPI, Azure)</h3>
+            
+            <div style="background: rgba(0, 243, 255, 0.1); padding: 15px; border-radius: 8px; margin: 20px 0;">
+                <p style="margin: 0;"><strong>Compétence mise en œuvre :</strong> 
+                   Déployer un service (Bloc 5)</p>
+            </div>
+
+            <h4>Déploiement GLPI sur machine virtuelle</h4>
+            <p>Mise en production d'un serveur GLPI sur infrastructure virtualisée.</p>
+            
+            <ul class="competence-list">
+                <li><strong>Environnement :</strong> VM Linux Debian sur VirtualBox</li>
+                <li><strong>Stack technique :</strong> Apache 2.4, MariaDB 10.5, PHP 7.4</li>
+                <li><strong>Étapes :</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Préparation de la VM (dimensionnement, réseau)</li>
+                        <li>Installation automatisée de la stack LAMP via script bash</li>
+                        <li>Sécurisation (firewall, SELinux, certificats SSL)</li>
+                        <li>Installation et configuration de GLPI</li>
+                        <li>Tests de charge et de performance</li>
+                        <li>Documentation du déploiement</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Expérience avec Microsoft Azure</h4>
+            <p>Découverte et utilisation de services cloud Azure dans un contexte de formation.</p>
+            
+            <ul class="competence-list">
+                <li>Création de machines virtuelles Windows Server et Linux</li>
+                <li>Configuration du stockage Azure (Blob Storage)</li>
+                <li>Mise en place de réseaux virtuels (VNet) et de règles de sécurité</li>
+                <li>Utilisation d'Azure Active Directory</li>
+                <li>Monitoring avec Azure Monitor</li>
+            </ul>
+
+            <h4>Compétences développées</h4>
+            <ul class="competence-list">
+                <li>✅ Maîtrise du déploiement on-premise et cloud</li>
+                <li>✅ Automatisation avec scripts bash</li>
+                <li>✅ Compréhension des architectures IaaS et PaaS</li>
+                <li>✅ Gestion des coûts cloud</li>
+            </ul>
+
+            <div style="margin-top: 20px;">
+                <span class="badge badge-blue">GLPI</span>
+                <span class="badge badge-blue">Linux</span>
+                <span class="badge badge-blue">Microsoft Azure</span>
+                <span class="badge badge-blue">Cloud</span>
+                <span class="badge badge-blue">Bloc 5</span>
+            </div>
+        </div>
+
+        <h2 style="margin-top: 60px;">Contexte de Formation</h2>
+        
+        <div class="grid-container">
+            <div class="card">
+                <h3><i class="fas fa-graduation-cap"></i> Formation</h3>
+                <p><strong>BTS Services Informatiques aux Organisations</strong></p>
+                <p><strong>Option :</strong> SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</p>
+                <p><strong>Établissement :</strong> EFREI Paris</p>
+                <p><strong>Session :</strong> 2023-2025</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-briefcase"></i> Expérience Professionnelle</h3>
+                <p><strong>Stage 1ère année :</strong> À venir</p>
+                <p><strong>Stage 2ème année :</strong> En recherche active</p>
+                <p>Recherche d'une alternance ou d'un stage en administration systèmes et réseaux</p>
+            </div>
+
+            <div class="card">
+                <h3><i class="fas fa-folder-open"></i> Portfolio</h3>
+                <p><strong>URL :</strong></p>
+                <p><a href="https://harouna05102004.github.io/Portfolio/index.html" target="_blank" style="color: var(--neon-blue); word-break: break-all;">
+                    https://harouna05102004.github.io/Portfolio/index.html
+                </a></p>
+                <p style="margin-top: 15px;">Portfolio présentant l'ensemble de mes réalisations et compétences techniques</p>
+            </div>
+        </div>
+
+        <section style="margin-top: 80px; text-align: center; padding: 60px 20px; background: var(--card-bg); border-radius: 12px;">
+            <h2 style="display: block; border: none;">Intéressé par mon profil ?</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto 30px;">
+                Je suis à la recherche d'opportunités pour mettre en pratique mes compétences et continuer à apprendre. 
+                N'hésitez pas à me contacter !
+            </p>
+            <a href="contact.html" class="btn"><i class="fas fa-envelope"></i> Me Contacter</a>
+            <a href="projets.html" class="btn btn-secondary" style="margin-left: 15px;">
+                <i class="fas fa-code"></i> Voir mes projets
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Régis Gomis - BTS SIO SISR | 
+           <a href="https://github.com/Rez310" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+           <a href="https://www.linkedin.com/in/regis-gomis-510b14386/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

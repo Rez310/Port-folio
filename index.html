@@ -1,565 +1,194 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-77JDMJFQ06"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-77JDMJFQ06');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Professionnel – Régis Gomis</title>
+    <title>Régis Gomis - Technicien Systèmes & Réseaux</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- VARIABLES & RESET --- */
-        :root {
-            /* Palette Corporate / Bleue */
-            --primary-color: #0f172a;       /* Bleu très foncé */
-            --accent-color: #2563eb;        /* Bleu roi dynamique */
-            --secondary-accent: #3b82f6;    /* Bleu plus clair */
-            --dev-color: #8b5cf6;           /* Violet pour la section Dev */
-            --bg-light: #f8fafc;            /* Gris très clair */
-            --bg-white: #ffffff;            /* Blanc pur */
-            --text-dark: #1e293b;           
-            --text-light: #64748b;          
-            --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
-            --radius: 8px;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Poppins', sans-serif;
-            color: var(--primary-color);
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: 0.3s;
-        }
-
-        ul { list-style: none; }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* --- HEADER & NAVIGATION --- */
-        header {
-            background-color: var(--bg-white);
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
-        .logo span { color: var(--accent-color); }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            font-weight: 600;
-            color: var(--text-dark);
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1e293b 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            color: white;
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #cbd5e1;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-        }
-
-        .hero-btn:hover {
-            background-color: var(--secondary-accent);
-            transform: translateY(-2px);
-        }
-
-        /* --- SECTIONS COMMUNES --- */
-        section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-        }
-
-        .section-title span {
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent-color);
-            margin: 0 auto;
-            border-radius: 2px;
-        }
-
-        /* --- À PROPOS --- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-img {
-            width: 100%;
-            height: 300px; 
-            object-fit: cover;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-md);
-            background-color: #ddd; 
-        }
-
-        /* --- COMPÉTENCES --- */
-        .bloc-competence {
-            background: var(--bg-white);
-            border-radius: var(--radius);
-            padding: 40px;
-            box-shadow: var(--shadow-md);
-            margin-bottom: 40px;
-            border-left: 5px solid var(--accent-color);
-        }
-
-        /* Style spécifique pour le bloc DEV */
-        .bloc-dev {
-            border-left-color: var(--dev-color);
-        }
-        
-        .bloc-dev .bloc-badge {
-            background-color: var(--dev-color);
-        }
-
-        .bloc-dev .skill-item:hover {
-            border-color: var(--dev-color);
-        }
-        
-        .bloc-dev .skill-item h4 i {
-            color: var(--dev-color);
-        }
-
-        .bloc-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 15px;
-        }
-
-        .bloc-badge {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-right: 15px;
-            text-transform: uppercase;
-        }
-
-        .bloc-title {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .skill-item {
-            background-color: var(--bg-light);
-            padding: 20px;
-            border-radius: var(--radius);
-            transition: 0.3s;
-            border: 1px solid transparent;
-        }
-
-        .skill-item:hover {
-            border-color: var(--accent-color);
-            background-color: white;
-            box-shadow: var(--shadow-sm);
-        }
-
-        .skill-item h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-
-        .skill-item h4 i {
-            color: var(--accent-color);
-            margin-right: 10px;
-            font-size: 0.9em;
-        }
-
-        .skill-item p {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin: 0;
-        }
-
-        /* --- PROJETS --- */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background: var(--bg-white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-content {
-            padding: 25px;
-        }
-
-        .project-tags span {
-            display: inline-block;
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 5px;
-            font-weight: 600;
-        }
-
-        /* --- CONTACT --- */
-        .contact-section {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-        }
-        
-        .contact-section h2 { color: white; }
-        .contact-section .section-title span { background-color: var(--secondary-accent); }
-
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .contact-item i {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            color: var(--secondary-accent);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background-color: #020617; 
-            color: #94a3b8;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.9rem;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .navbar { flex-direction: column; height: auto; padding: 20px 0; }
-            .nav-links { flex-direction: column; gap: 15px; text-align: center; margin-top: 20px; }
-            .about-grid { grid-template-columns: 1fr; text-align: center; }
-            .bloc-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-            .contact-methods { flex-direction: column; gap: 30px; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <canvas id="matrix-bg"></canvas>
 
-    <header>
-        <div class="container navbar">
-            <div class="logo">Régis<span>Gomis</span></div>
-            <nav class="nav-links">
-                <a href="#about">À propos</a>
-                <a href="#competences">Compétences</a>
-                <a href="#projects">Projets</a>
-                <a href="#contact">Contact</a>
-            </nav>
+    <nav>
+        <div class="logo">&lt;RegisGomis /&gt;</div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="competences.html">Compétences</a>
+            <a href="projets.html">Projets</a>
+            <a href="realisations.html">Réalisations Pro</a>
+            <a href="contact.html">Contact</a>
         </div>
-    </header>
+    </nav>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Futur Administrateur Systèmes & Réseaux</h1>
-            <p>Étudiant en BTS SIO option SISR à l'Efrei Paris. <br>Profil polyvalent avec compétences en Développement.</p>
-            <a href="#contact" class="hero-btn">Me contacter</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>Mon Profil</h2>
-                <span></span>
-            </div>
-            <div class="about-grid">
-                <img src="images/photo.jpg" alt="Régis Gomis" class="about-img">
-                <div class="about-text">
-                    <h3>Qui suis-je ?</h3>
-                    <p style="margin-bottom: 15px;">
-                        Actuellement en première année de <strong>BTS SIO (Services Informatiques aux Organisations)</strong>, option SISR, je me forme à la gestion, la sécurisation et la maintenance des infrastructures informatiques.
-                    </p>
-                    <p>
-                        Mon parcours scout m'a appris la rigueur, le travail d'équipe et la gestion de projet. Bien que spécialisé en réseaux, je maintiens une forte appétence pour le développement web et logiciel, ce qui me permet d'avoir une vision globale des projets informatiques.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="competences" style="background-color: #f1f5f9;">
-        <div class="container">
-            <div class="section-title">
-                <h2>Compétences Techniques</h2>
-                <span></span>
-            </div>
-
-            <div class="bloc-competence">
-                <div class="bloc-header">
-                    <span class="bloc-badge">Bloc 1</span>
-                    <h3 class="bloc-title">Support et mise à disposition de services</h3>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4><i class="fas fa-desktop"></i> Gestion de parc</h4>
-                        <p>Recensement des actifs, gestion de tickets (GLPI) et suivi du cycle de vie.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-headset"></i> Support Utilisateur</h4>
-                        <p>Réponse aux incidents, assistance de niveau 1 et accompagnement.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-globe"></i> Présence en ligne</h4>
-                        <p>Valorisation de l'image numérique et gestion des identités.</p>
-                    </div>
+    <div class="container">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Régis Gomis</h1>
+                <h1 class="glitch">Technicien SISR</h1>
+                <p>Étudiant en BTS SIO option SISR (Solutions d'Infrastructure, Systèmes et Réseaux). 
+                   Passionné par l'administration système, la sécurité réseau et l'automatisation.</p>
+                <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="projets.html" class="btn"><i class="fas fa-folder-open"></i> Mes Projets</a>
+                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-envelope"></i> Me Contacter</a>
+                    <a href="https://github.com/Rez310" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
 
-            <div class="bloc-competence">
-                <div class="bloc-header">
-                    <span class="bloc-badge">Bloc 2</span>
-                    <h3 class="bloc-title">Administration des systèmes et réseaux</h3>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span style="margin-left: 10px; font-size: 0.85rem; color: #888;">portfolio.py</span>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4><i class="fas fa-network-wired"></i> Infrastructure Réseau</h4>
-                        <p>Conception LAN/WAN, adressage IPv4/IPv6, commutation et routage.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-server"></i> Administration Serveurs</h4>
-                        <p>Installation Windows Server/Linux, Active Directory, DHCP, DNS.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-chart-line"></i> Supervision</h4>
-                        <p>Monitoring des services, disponibilité et maintenance préventive.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bloc-competence bloc-dev">
-                <div class="bloc-header">
-                    <span class="bloc-badge">Polyvalence</span>
-                    <h3 class="bloc-title">Développement d'applications</h3>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4><i class="fas fa-code"></i> Développement Web</h4>
-                        <p>Conception de sites (HTML, CSS, PHP) et interfaces responsive.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-database"></i> Gestion des Données</h4>
-                        <p>Modélisation et requêtage de bases de données (SQL, MySQL).</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-terminal"></i> Algorithmique</h4>
-                        <p>Écriture de scripts, logique de programmation et maintenance applicative.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bloc-competence">
-                <div class="bloc-header">
-                    <span class="bloc-badge">Bloc 3</span>
-                    <h3 class="bloc-title">Cybersécurité des infrastructures</h3>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <h4><i class="fas fa-user-shield"></i> Protection des données</h4>
-                        <p>Application du RGPD et sécurisation des accès utilisateurs.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-lock"></i> Sécurité des équipements</h4>
-                        <p>Configuration de pare-feux, ACLs et durcissement des systèmes.</p>
-                    </div>
-                    <div class="skill-item">
-                        <h4><i class="fas fa-key"></i> Identité Numérique</h4>
-                        <p>Authentification forte et gestion des privilèges.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Réalisations</h2>
-                <span></span>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Architecture Réseau Sécurisée</h3>
-                        <p style="margin: 15px 0; color: var(--text-light);">Conception d'un réseau d'entreprise multisites avec segmentation VLAN et routage inter-vlan.</p>
-                        <div class="project-tags">
-                            <span>Cisco Packet Tracer</span>
-                            <span>VLAN</span>
-                            <span>Sécurité</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Serveur de Ticketing (GLPI)</h3>
-                        <p style="margin: 15px 0; color: var(--text-light);">Déploiement d'une solution GLPI sur serveur Linux pour la gestion du support utilisateur.</p>
-                        <div class="project-tags">
-                            <span>Linux Debian</span>
-                            <span>GLPI</span>
-                            <span>Apache/MySQL</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3>Teranga Azur (E-commerce)</h3>
-                        <p style="margin: 15px 0; color: var(--text-light);">Site e-commerce de vente de villas. Développement front/back et base de données.</p>
-                        <div class="project-tags">
-                            <span>PHP/SQL</span>
-                            <span>HTML/CSS</span>
-                            <span>Projet Dev</span>
-                        </div>
-                    </div>
+                <div class="terminal-body">
+                    <pre id="typewriter"></pre>
+                    <span class="cursor"></span>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contactez-moi</h2>
-                <span></span>
+        <section style="margin-top: 100px;">
+            <h2>Compétences BTS SIO</h2>
+            <p style="color: var(--text-dim); margin-bottom: 30px;">Six blocs de compétences couvrant l'ensemble des activités d'un technicien SISR</p>
+            
+            <div class="grid-container">
+                <div class="card card-hover" onclick="window.location.href='competences.html#patrimoine'">
+                    <div class="card-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Gérer le Patrimoine Informatique</h3>
+                    <p>Recensement et identification des ressources numériques avec GLPI</p>
+                    <span class="badge badge-blue">GLPI</span>
+                    <span class="badge badge-blue">Inventaire</span>
+                    <span class="badge badge-blue">Habilitations</span>
+                </div>
+
+                <div class="card card-hover" onclick="window.location.href='competences.html#incidents'">
+                    <div class="card-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Répondre aux Incidents</h3>
+                    <p>Traitement des demandes et résolution d'incidents systèmes/réseaux</p>
+                    <span class="badge badge-blue">Support N1/N2</span>
+                    <span class="badge badge-blue">Ticketing</span>
+                    <span class="badge badge-blue">Dépannage</span>
+                </div>
+
+                <div class="card card-hover" onclick="window.location.href='competences.html#web'">
+                    <div class="card-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Développer la Présence en Ligne</h3>
+                    <p>Création de sites web et optimisation SEO avec Google Analytics</p>
+                    <span class="badge">HTML/CSS/JS</span>
+                    <span class="badge">Analytics</span>
+                    <span class="badge">SEO</span>
+                </div>
+
+                <div class="card card-hover" onclick="window.location.href='competences.html#projet'">
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Travailler en Mode Projet</h3>
+                    <p>Gestion de projet avec méthodes agiles et outils collaboratifs</p>
+                    <span class="badge">Agile</span>
+                    <span class="badge">Trello</span>
+                    <span class="badge">Planning</span>
+                </div>
+
+                <div class="card card-hover" onclick="window.location.href='competences.html#service'">
+                    <div class="card-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Mettre à Disposition un Service</h3>
+                    <p>Déploiement et accompagnement utilisateur sur GLPI et Azure</p>
+                    <span class="badge badge-blue">Déploiement</span>
+                    <span class="badge badge-blue">Azure</span>
+                    <span class="badge badge-blue">Tests</span>
+                </div>
+
+                <div class="card card-hover" onclick="window.location.href='competences.html#dev-pro'">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Développement Professionnel</h3>
+                    <p>Veille technologique et gestion de carrière</p>
+                    <span class="badge">Veille Tech</span>
+                    <span class="badge">Auto-formation</span>
+                    <span class="badge">Portfolio</span>
+                </div>
             </div>
-            <div class="contact-methods">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>regisgomis3@gmail.com</p>
+        </section>
+
+        <section style="margin-top: 100px;">
+            <h2 style="border-color: var(--neon-purple);">Projets Phares</h2>
+            <div class="grid-container" style="margin-top: 40px;">
+                <div class="card">
+                    <div class="project-badge">SISR</div>
+                    <h3>Architecture Réseau Sécurisée</h3>
+                    <p>Conception complète d'un réseau d'entreprise multisite avec segmentation VLANs, authentification Radius et pare-feu PfSense.</p>
+                    <ul>
+                        <li>3 sites interconnectés</li>
+                        <li>Adressage IPv4/IPv6</li>
+                        <li>ACLs et politiques de sécurité</li>
+                    </ul>
+                    <a href="projets.html#reseau" class="btn-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>07 51 03 25 57</p>
+
+                <div class="card">
+                    <div class="project-badge dev">WEB DEV</div>
+                    <div class="status-badge">🚧 En développement actif</div>
+                    <h3>Teranga Azur</h3>
+                    <p>Site e-commerce immobilier pour la vente de villas de luxe au Sénégal. Projet académique actuellement en cours de développement.</p>
+                    <ul>
+                        <li>Design responsive moderne</li>
+                        <li>Base de données clients</li>
+                        <li>Système de réservation en ligne</li>
+                    </ul>
+                    <a href="projets.html#teranga" class="btn-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <p><a href="https://www.linkedin.com/in/regis-gomis-510b14386/" target="_blank">Profil LinkedIn</a></p>
-                </div>
-                <div class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <p><a href="https://github.com/Rez310" target="_blank">Profil GitHub</a></p>
+
+                <div class="card">
+                    <div class="project-badge ops">LINUX</div>
+                    <h3>Serveur de Ticketing GLPI</h3>
+                    <p>Déploiement d'une solution complète de gestion des incidents sur machine virtuelle Linux avec stack LAMP.</p>
+                    <ul>
+                        <li>Installation LAMP automatisée</li>
+                        <li>Configuration multi-entités</li>
+                        <li>Intégration Active Directory</li>
+                    </ul>
+                    <a href="projets.html#glpi" class="btn-link">Voir le projet <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section style="margin-top: 100px; text-align: center; padding: 60px 20px; background: var(--card-bg); border-radius: 12px;">
+            <h2 style="display: block; border: none;">Prêt à collaborer ?</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto 30px;">
+                Je suis actuellement à la recherche d'un stage ou d'une alternance en administration systèmes et réseaux. 
+                N'hésitez pas à me contacter pour discuter de vos besoins !
+            </p>
+            <a href="contact.html" class="btn"><i class="fas fa-paper-plane"></i> Me Contacter</a>
+        </section>
+    </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Régis Gomis. Portfolio réalisé dans le cadre du BTS SIO.</p>
-        </div>
+        <p>&copy; 2025 Régis Gomis - BTS SIO SISR | 
+           <a href="https://github.com/Rez310" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+           <a href="https://www.linkedin.com/in/regis-gomis-510b14386/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

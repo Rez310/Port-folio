@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Régis Gomis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="matrix-bg"></canvas>
+
+    <nav>
+        <div class="logo">&lt;RegisGomis /&gt;</div>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="competences.html" class="active">Compétences</a>
+            <a href="projets.html">Projets</a>
+            <a href="realisations.html">Réalisations Pro</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Mes Compétences Techniques</h1>
+        <p style="color: var(--text-dim); margin-bottom: 50px; font-size: 1.1rem;">
+            Compétences acquises dans le cadre du BTS SIO option SISR, organisées selon le référentiel officiel
+        </p>
+
+        <!-- Bloc 1: Gérer le patrimoine informatique -->
+        <section id="patrimoine" class="competence-detail">
+            <h2 style="display: block; width: 100%; border-color: var(--neon-blue);">
+                <i class="fas fa-server"></i> Bloc 1 : Gérer le Patrimoine Informatique
+            </h2>
+            
+            <h3>Recenser et identifier les ressources numériques</h3>
+            <p>Mise en place d'un système d'inventaire automatisé avec GLPI permettant de tracer tous les équipements informatiques de l'organisation.</p>
+            <ul class="competence-list">
+                <li>Déploiement et configuration de GLPI sur serveur Linux</li>
+                <li>Installation d'agents d'inventaire sur les postes clients</li>
+                <li>Création de rapports automatisés d'inventaire matériel et logiciel</li>
+                <li>Gestion du cycle de vie des équipements (acquisition, affectation, maintenance, fin de vie)</li>
+            </ul>
+
+            <h3>Exploiter les référentiels et normes</h3>
+            <p>Application des bonnes pratiques ITIL pour la gestion des services informatiques.</p>
+            <ul class="competence-list">
+                <li>Mise en œuvre des processus ITIL (gestion des incidents, des changements)</li>
+                <li>Respect des normes de sécurité (ISO 27001)</li>
+                <li>Documentation technique standardisée</li>
+            </ul>
+
+            <h3>Vérifier les niveaux d'habilitation</h3>
+            <p>Configuration des droits d'accès et des politiques de sécurité selon le principe du moindre privilège.</p>
+            <ul class="competence-list">
+                <li>Gestion des groupes et utilisateurs dans Active Directory</li>
+                <li>Configuration des ACL sur les ressources réseau et systèmes</li>
+                <li>Mise en place de l'authentification multi-facteurs</li>
+            </ul>
+
+            <h3>Gérer des sauvegardes</h3>
+            <p>Mise en place de stratégies de sauvegarde pour assurer la continuité de service.</p>
+            <ul class="competence-list">
+                <li>Configuration de sauvegardes automatiques (complètes, différentielles, incrémentielles)</li>
+                <li>Tests de restauration réguliers</li>
+                <li>Mise en place du plan de reprise d'activité (PRA)</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <span class="badge badge-blue">GLPI</span>
+                <span class="badge badge-blue">Active Directory</span>
+                <span class="badge badge-blue">ITIL</span>
+                <span class="badge badge-blue">Sauvegardes</span>
+                <span class="badge badge-blue">ISO 27001</span>
+            </div>
+        </section>
+
+        <!-- Bloc 2: Répondre aux incidents -->
+        <section id="incidents" class="competence-detail">
+            <h2 style="display: block; width: 100%; border-color: var(--neon-purple);">
+                <i class="fas fa-headset"></i> Bloc 2 : Répondre aux Incidents et Demandes d'Assistance
+            </h2>
+            
+            <h3>Collecter, suivre et orienter les demandes</h3>
+            <p>Gestion centralisée des demandes utilisateurs via un système de ticketing GLPI.</p>
+            <ul class="competence-list">
+                <li>Configuration du système de gestion de tickets sur GLPI</li>
+                <li>Catégorisation et priorisation des incidents selon leur impact</li>
+                <li>Routing automatique vers les équipes compétentes</li>
+                <li>Suivi des SLA (Service Level Agreement)</li>
+            </ul>
+
+            <h3>Traiter les demandes services réseau et système</h3>
+            <p>Résolution d'incidents sur l'infrastructure réseau et les serveurs.</p>
+            <ul class="competence-list">
+                <li>Diagnostic et résolution de problèmes de connectivité réseau</li>
+                <li>Dépannage des services Windows Server (AD, DNS, DHCP)</li>
+                <li>Intervention sur les systèmes Linux (Apache, MySQL, SSH)</li>
+                <li>Configuration de VLANs et de routage</li>
+            </ul>
+
+            <h3>Traiter les demandes concernant les applications</h3>
+            <p>Support applicatif et assistance aux utilisateurs sur les logiciels métiers.</p>
+            <ul class="competence-list">
+                <li>Installation et configuration de logiciels</li>
+                <li>Résolution de problèmes applicatifs</li>
+                <li>Formation des utilisateurs finaux</li>
+                <li>Création de documentation utilisateur</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <span class="badge badge-purple">Support N1/N2</span>
+                <span class="badge badge-purple">GLPI Ticketing</span>
+                <span class="badge badge-purple">Windows Server</span>
+                <span class="badge badge-purple">Linux</span>
+                <span class="badge badge-purple">Réseau</span>
+            </div>
+        </section>
+
+        <!-- Bloc 3: Développer la présence en ligne -->
+        <section id="web" class="competence-detail">
+            <h2 style="display: block; width: 100%; border-color: var(--neon-green);">
+                <i class="fas fa-globe"></i> Bloc 3 : Développer la Présence en Ligne
+            </h2>
+            
+            <h3>Participer à la valorisation de l'image sur les médias numériques</h3>
+            <p>Création et gestion de contenus web respectant le cadre juridique et les enjeux économiques.</p>
+            <ul class="competence-list">
+                <li>Respect du RGPD dans la collecte et le traitement des données</li>
+                <li>Application des licences et droits d'auteur</li>
+                <li>Optimisation de l'image de marque en ligne</li>
+            </ul>
+
+            <h3>Référencer les services en ligne et mesurer leur visibilité</h3>
+            <p>Mise en place d'outils d'analyse pour suivre les performances des sites web.</p>
+            <ul class="competence-list">
+                <li>Ajout d'une balise Google Analytics sur landing pages</li>
+                <li>Analyse du trafic et comportement utilisateur</li>
+                <li>Optimisation SEO pour améliorer le référencement naturel</li>
+                <li>Suivi des KPIs (taux de conversion, taux de rebond, etc.)</li>
+            </ul>
+
+            <h3>Participer à l'évolution d'un site Web</h3>
+            <p>Développement et maintenance de sites web exploitant les données de l'organisation.</p>
+            <ul class="competence-list">
+                <li>Création d'interfaces responsive avec HTML5, CSS3, JavaScript</li>
+                <li>Intégration de bases de données MySQL</li>
+                <li>Mise à jour et évolution fonctionnelle des sites</li>
+                <li>Tests de compatibilité multi-navigateurs</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <span class="badge badge-green">HTML5</span>
+                <span class="badge badge-green">CSS3</span>
+                <span class="badge badge-green">JavaScript</span>
+                <span class="badge badge-green">Google Analytics</span>
+                <span class="badge badge-green">SEO</span>
+                <span class="badge badge-green">RGPD</span>
+            </div>
+        </section>
+
+        <!-- Bloc 4: Travailler en mode projet -->
+        <section id="projet" class="competence-detail">
+            <h2 style="display: block; width: 100%; border-color: var(--neon-orange);">
+                <i class="fas fa-tasks"></i> Bloc 4 : Travailler en Mode Projet
+            </h2>
+            
+            <h3>Analyser les objectifs et modalités d'organisation d'un projet</h3>
+            <p>Compréhension et analyse des besoins client pour définir le cahier des charges.</p>
+            <ul class="competence-list">
+                <li>Recueil et analyse des besoins utilisateurs</li>
+                <li>Rédaction de cahiers des charges techniques</li>
+                <li>Identification des ressources nécessaires</li>
+            </ul>
+
+            <h3>Planifier les activités</h3>
+            <p>Utilisation de méthodes agiles pour organiser le travail en équipe.</p>
+            <ul class="competence-list">
+                <li>Travail en méthode agile sur l'outil de gestion de projet Trello</li>
+                <li>Découpage en sprints et user stories</li>
+                <li>Création de diagrammes de Gantt</li>
+                <li>Organisation de daily meetings et rétrospectives</li>
+            </ul>
+
+            <h3>Évaluer les indicateurs de suivi</h3>
+            <p>Monitoring de l'avancement du projet et ajustement en cas de dérive.</p>
+            <ul class="competence-list">
+                <li>Suivi de la vélocité et burndown charts</li>
+                <li>Analyse des écarts planning/réalisé</li>
+                <li>Reporting régulier aux parties prenantes</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <span class="badge badge-orange">Méthode Agile</span>
+                <span class="badge badge-orange">Scrum</span>
+                <span class="badge badge-orange">Trello</span>
+                <span class="badge badge-orange">Gantt</span>
+                <span class="badge badge-orange">Gestion de projet</span>
+            </div>
+        </section>
+
+        <!-- Bloc 5: Mettre à disposition un service -->
+        <section id="service" class="competence-detail">
+            <h2 style="display: block; width: 100%; border-color: var(--neon-blue);">
+                <i class="fas fa-cloud-upload-alt"></i> Bloc 5 : Mettre à Disposition des Utilisateurs un Service Informatique
+            </h2>
+            
+            <h3>Réaliser les tests d'intégration et d'acceptation</h3>
+            <p>Validation du bon fonctionnement des services avant mise en production.</p>
+            <ul class="competence-list">
+                <li>Création de scénarios de tests fonctionnels</li>
+                <li>Tests de charge et de performance</li>
+                <li>Validation avec les utilisateurs finaux (UAT)</li>
+            </ul>
+
+            <h3>Déployer un service</h3>
+            <p>Mise en production de services informatiques sur différentes plateformes.</p>
+            <ul class="competence-list">
+                <li>Déployer un service (GLPI, Azure)</li>
+                <li>Déployer GLPI sur une machine virtuelle Linux</li>
+                <li>Configuration de services Azure (machines virtuelles, stockage)</li>
+                <li>Automatisation du déploiement avec scripts</li>
+            </ul>
+
+            <h3>Accompagner les utilisateurs</h3>
+            <p>Formation et accompagnement des utilisateurs lors de la mise en place de nouveaux services.</p>
+            <ul class="competence-list">
+                <li>Création de guides et tutoriels utilisateurs</li>
+                <li>Sessions de formation en présentiel et à distance</li>
+                <li>Support post-déploiement et hotline</li>
+                <li>Recueil des retours utilisateurs pour amélioration continue</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <span class="badge badge-blue">Déploiement</span>
+                <span class="badge badge-blue">GLPI</span>
+                <span class="badge badge-blue">Microsoft Azure</span>
+                <span class="badge badge-blue">Linux VM</span>
+                <span class="badge badge-blue">Formation</span>
+            </div>
+        </section>
+
+        <!-- Bloc 6: Développement professionnel -->
+        <section id="dev-pro" class="competence-detail">
+            <h2 style="display: block; width: 100%; border-color: var(--neon-purple);">
+                <i class="fas fa-graduation-cap"></i> Bloc 6 : Organiser son Développement Professionnel
+            </h2>
+            
+            <h3>Mettre en place son environnement d'apprentissage</h3>
+            <p>Organisation de l'auto-formation et de la montée en compétences.</p>
+            <ul class="competence-list">
+                <li>Création d'un environnement de lab virtuel (VirtualBox, VMware)</li>
+                <li>Utilisation de plateformes d'apprentissage en ligne (OpenClassrooms, Coursera)</li>
+                <li>Participation à des communautés techniques (GitHub, Stack Overflow)</li>
+            </ul>
+
+            <h3>Mettre en œuvre des outils de veille informationnelle</h3>
+            <p>Suivi de l'actualité technologique et des évolutions du secteur.</p>
+            <ul class="competence-list">
+                <li>Veille technologique sur les nouvelles solutions (RSS, Twitter, newsletters)</li>
+                <li>Suivi des vulnérabilités de sécurité (CVE, CERT-FR)</li>
+                <li>Participation à des conférences et webinaires techniques</li>
+            </ul>
+
+            <h3>Gérer son identité professionnelle</h3>
+            <p>Construction et valorisation de mon profil professionnel en ligne.</p>
+            <ul class="competence-list">
+                <li>Création et maintenance de ce portfolio professionnel</li>
+                <li>Gestion active du profil LinkedIn et GitHub</li>
+                <li>Participation à des projets open source</li>
+            </ul>
+
+            <h3>Développer son projet professionnel</h3>
+            <p>Définition de mes objectifs de carrière et plan d'action associé.</p>
+            <ul class="competence-list">
+                <li>Clarification de mes objectifs : spécialisation en sécurité réseau</li>
+                <li>Recherche active de stage/alternance</li>
+                <li>Préparation aux certifications (CCNA, Linux+)</li>
+            </ul>
+
+            <div style="margin-top: 30px;">
+                <span class="badge badge-purple">Veille Technologique</span>
+                <span class="badge badge-purple">Auto-formation</span>
+                <span class="badge badge-purple">Portfolio</span>
+                <span class="badge badge-purple">LinkedIn</span>
+                <span class="badge badge-purple">GitHub</span>
+            </div>
+        </section>
+
+        <section style="margin-top: 80px; text-align: center;">
+            <h2 style="display: block; border: none;">Découvrez mes réalisations concrètes</h2>
+            <p style="color: var(--text-dim); margin-bottom: 30px;">
+                Consultez mes projets pour voir comment j'ai mis en pratique ces compétences
+            </p>
+            <a href="projets.html" class="btn"><i class="fas fa-folder-open"></i> Voir mes projets</a>
+            <a href="realisations.html" class="btn btn-secondary" style="margin-left: 15px;">
+                <i class="fas fa-briefcase"></i> Réalisations professionnelles
+            </a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Régis Gomis - BTS SIO SISR | 
+           <a href="https://github.com/Rez310" target="_blank"><i class="fab fa-github"></i> GitHub</a> |
+           <a href="https://www.linkedin.com/in/regis-gomis-510b14386/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
