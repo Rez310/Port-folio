@@ -1,14 +1,20 @@
 :root {
-    --bg-color: #050505;
-    --card-bg: rgba(20, 20, 30, 0.85);
-    --neon-blue: #00f3ff;
-    --neon-purple: #bc13fe;
-    --neon-green: #0f0;
-    --neon-orange: #ff6b35;
-    --text-main: #e0e0e0;
-    --text-dim: #a0a0a0;
-    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-code: 'Courier New', Courier, monospace;
+  --bg-color: #0a0a0a;
+  --card-bg: rgba(25, 25, 35, 0.85);
+
+  /* Accents doux */
+  --neon-blue: #5fd3e6;
+  --neon-purple: #b48ee8;
+  --neon-green: #8fbf9f;
+  --neon-orange: #d98b5e;
+
+  /* Texte */
+  --text-main: #e5e5e5;
+  --text-dim: #9c9c9c;
+
+  /* Fonts */
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-code: 'Courier New', Courier, monospace;
 }
 
 * { 
